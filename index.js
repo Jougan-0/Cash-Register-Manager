@@ -4,7 +4,6 @@ const CheckButton=document.querySelector(".check-button");
 var message=document.querySelector(".error-message");
 const NotesNumber=document.querySelectorAll(".Notes");
 var Notes=[2000,500,100,50,10,1];
-
 CheckButton.addEventListener("click",function ValidateBillAmount(){
     message.style.display="none";
     if(billAmount.value>=0)
