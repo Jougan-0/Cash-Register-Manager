@@ -11,7 +11,6 @@ CheckButton.addEventListener("click",function ValidateBillAmount(){
     {
         if(Cashgiven.value>=billAmount.value){
             var Cashleft=Cashgiven.value-billAmount.value;
-            console.log(Cashleft)
             NotesCalculated(Cashleft);
         }
         else
@@ -27,7 +26,6 @@ function NotesCalculated(cashToBeCalculated){
     {
         var NotesNeeded=Math.trunc(cashToBeCalculated/Notes[i]);
         cashToBeCalculated%=Notes[i];
-        console.log(NotesNeeded);
         NotesNumber[i].innerText=NotesNeeded;
     }
 }
