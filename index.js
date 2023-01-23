@@ -5,10 +5,11 @@ var message=document.querySelector(".error-message");
 const NotesNumber=document.querySelectorAll(".Notes");
 var Notes=[2000,500,100,50,10,1];
 CheckButton.addEventListener("click",function ValidateBillAmount(){
+    console.log(Cashgiven.value+"   "+billAmount.value)
     message.style.display="none";
     if(billAmount.value>=0)
     {
-        if(Cashgiven.value>=billAmount.value){
+        if(Number(Cashgiven.value)>=Number(billAmount.value)){
             var Cashleft=Cashgiven.value-billAmount.value;
             NotesCalculated(Cashleft);
         }
